@@ -1,0 +1,226 @@
+Auteur: pu29avw
+Date: 28.10.2024
+Entreprise: DGEP
+Description: Calculatrice
+
+Voici les ordres du programme Calculatrice  :
+
+	Effacer l'écran.
+	Créer une zone mémoire nommée #touchePressee avec le texte "vide".
+	
+	Répéter tant que #touchePressee est différente de "Esc"
+	
+		Répéter 20000000000000000000000000000x
+			Afficher "\nBienvenue dans la Calculatrice !!\n".
+			
+			//Création du fonctionnement des difféerents calculs
+			Créer une zone mémoire nommée #saisiejoueur.
+			Créer une zone mémoire nommée #resAddition.
+			Créer une zone mémoire nommée #resSoustraction.
+			Créer une zone mémoire nommée #resMultiplication.
+			Créer une zone mémoire nommée #resDivision.
+			Créer une zone mémoire nommée #resInversion.
+			Créer une zone mémoire nommée #resRacine.
+			Créer une zone mémoire nommée #resPuissance.
+			Créer une zone mémoire nommée #resPourcentage.
+			
+			
+			
+			Afficher "\n 1 = Addition 			2 = Soustraction 	3 = Multiplication	4 = Division\n".
+			Afficher "\n 5 = Inversion(1/x)		6 = Racine		7 = Puissance	   	8 = Pourcentage\n".
+			
+			Afficher "\nEntrez le calcul souhaité : ".
+			
+			
+			Récupérer la saisie et la stocker dans #saisiejoueur.
+			
+			
+			
+			//Création des opérations de deux chiffres pour chaque option de calcul
+			Créer une zone mémoire nommée #add1.
+			Créer une zone mémoire nommée #add2.
+			Créer une zone mémoire nommée #repadd.
+			
+			Créer une zone mémoire nommée #memoire.
+			
+			Créer une zone mémoire nommée #sous1.
+			Créer une zone mémoire nommée #sous2.
+			Créer une zone mémoire nommée #repsous.
+			
+			Créer une zone mémoire nommée #mult1.
+			Créer une zone mémoire nommée #mult2.
+			Créer une zone mémoire nommée #repmult.
+			
+			Créer une zone mémoire nommée #div1.
+			Créer une zone mémoire nommée #div2.
+			Créer une zone mémoire nommée #repdiv.
+			
+			Créer une zone mémoire nommée #inv1.
+			Créer une zone mémoire nommée #repinv.
+			
+			Créer une zone mémoire nommée #rac1.
+			//Créer une zone mémoire nommée #rac2.
+			Créer une zone mémoire nommée #reprac.
+			
+			Créer une zone mémoire nommée #puis1.
+			Créer une zone mémoire nommée #puis2.
+			Créer une zone mémoire nommée #reppuis.
+			
+			Créer une zone mémoire nommée #pour1.
+			//Créer une zone mémoire nommée #pour2.
+			Créer une zone mémoire nommée #reppour.
+			
+			
+			//Mettre à répeter tant que la touche ""Escapte" n'est pas appuyer
+			
+			Si #saisiejoueur est égale à 1 alors 
+				Afficher "\nRentrer le premier chiffre à Additioner : ".
+				Récupérer la saisie et la stocker dans #add1. 
+				Afficher "\nRentrer le deuxième chiffre à Additioner : ".
+				Récupérer la saisie et la stocker dans #add2.
+				#repadd = #add1 plus #add2.
+				Afficher "\nLa réponse est : #repadd".
+				Afficher "\n".
+				
+				Afficher "\nVoulez vous stocker cette reponse en mémoire ? \n".				
+				Afficher "\n1 = Oui		2 = Non : ".
+				Récupérer la saisie et la stocker dans #saisiejoueur.
+				Si #saisiejoueur == 1 alors 
+					#memoire = #repadd. 
+					Afficher "\nRéponse mise en stock : #memoire".
+					Afficher "\n".
+					
+					Afficher "\nVoulez vous utiliser la réponse stockée dans la mémoire ? \n".
+					Afficher "\n1 = Oui		2 = Non : ".
+					Récupérer la saisie et la stocker dans #saisiejoueur.
+					Si #saisiejoueur == 1 alors 
+						Afficher "\nRentrer le deuxième chiffre à additioner : ".
+						Récupérer la saisie et la stocker dans #add2.
+						#repadd = #memoire plus #add2.
+						Afficher "\nLa réponse est : #repadd".
+						Afficher "\n".
+					?
+			
+					
+				?
+
+			sinon si #saisiejoueur est égale à 2 alors
+				Afficher "\nRentrer le premier chiffre à Soustraire : ".
+				Récupérer la saisie et la stocker dans #sous1. 
+				Afficher "\nRentrer le deuxième chiffre à Soustraire : ".
+				Récupérer la saisie et la stocker dans #sous2.
+				#repsous = #sous1 moins #sous2.
+				Afficher "\nLa réponse est : #repsous".
+				Afficher "\n".
+				
+				Afficher "\nVoulez vous stocker cette reponse en mémoire ? \n".				
+				Afficher "\n1 = Oui		2 = Non : ".
+				Récupérer la saisie et la stocker dans #saisiejoueur.
+				Si #saisiejoueur == 1 alors 
+					#memoire = #repsous. 
+					Afficher "\nRéponse mise en stock : #memoire".
+					Afficher "\n".
+					
+					Afficher "\nVoulez vous utiliser la réponse stockée dans la mémoire ? \n".
+					Afficher "\n1 = Oui		2 = Non : ".
+					Récupérer la saisie et la stocker dans #saisiejoueur.
+					Si #saisiejoueur == 1 alors 
+						Afficher "\nRentrer le deuxième chiffre à soustraire : ".
+						Récupérer la saisie et la stocker dans #sous2.
+						#repsous = #memoire plus #sous2.
+						Afficher "\nLa réponse est : #repsous".
+						Afficher "\n".
+					?
+			
+					
+				?
+			
+			sinon si #saisiejoueur est égale à 3 alors
+				Afficher "\nRentrer le premier chiffre à Multiplier : ".
+				Récupérer la saisie et la stocker dans #mult1. 
+				Afficher "\nRentrer le deuxième chiffre à Multiplier : ".
+				Récupérer la saisie et la stocker dans #mult2.
+				#repmult = #mult1 fois #mult2.
+				Afficher "\nLa réponse est : #repmult".
+				Afficher "\n".
+				
+				Afficher "\nVoulez vous stocker cette reponse en mémoire ? \n".				
+				Afficher "\n1 = Oui		2 = Non : ".
+				Récupérer la saisie et la stocker dans #saisiejoueur.
+				Si #saisiejoueur == 1 alors 
+					#memoire = #repmult. 
+					Afficher "\nRéponse mise en stock : #memoire".
+					Afficher "\n".
+					
+					Afficher "\nVoulez vous utiliser la réponse stockée dans la mémoire ? \n".
+					Afficher "\n1 = Oui		2 = Non : ".
+					Récupérer la saisie et la stocker dans #saisiejoueur.
+					Si #saisiejoueur == 1 alors 
+						Afficher "\nRentrer le deuxième chiffre à Multiplier : ".
+						Récupérer la saisie et la stocker dans #mult2.
+						#repmult = #memoire fois #mult2.
+						Afficher "\nLa réponse est : #repmult".
+						Afficher "\n".
+					?
+			
+					
+				?
+			sinon si #saisiejoueur est égale à 4 alors
+				Afficher "\nRentrer le Dividende : ".
+				Récupérer la saisie et la stocker dans #div1. 
+				Afficher "\nRentrer le Diviseur : ".
+				Récupérer la saisie et la stocker dans #div2.
+				#repdiv = #div1 divisé par #div2.
+				Afficher "\nLa réponse est : #repdiv".
+				Afficher "\n".
+				
+			sinon si #saisiejoueur est égale à 5 alors
+				Afficher "\nRentrer le chiffre à Inverser : ".
+				Récupérer la saisie et la stocker dans #inv1. 
+				#repinv = 1 divisé par #inv1.
+				Afficher "\nLa réponse est : #repinv".
+				Afficher "\n".
+			
+			sinon si #saisiejoueur est égale à 6 alors
+				Afficher "\nRentrer la Radicande : ".
+				Récupérer la saisie et la stocker dans #rac1. 
+				//Afficher "\nRentrer l'indice de la racine : ".
+				//Récupérer la saisie et la stocker dans #rac2.
+				#reprac = racine carrée de #rac1.
+				Afficher "\nLa réponse est : #reprac".
+				Afficher "\n".
+			
+			sinon si #saisiejoueur est égale à 7 alors
+				Afficher "\nRentrer la base de la Puissance : ".
+				Récupérer la saisie et la stocker dans #puis1. 
+				Afficher "\nRentrer l'exposant de la Puissance : ".
+				Récupérer la saisie et la stocker dans #puis2.
+				#reppuis = #puis1 élevé à la puissance #puis2.
+				Afficher "\nLa réponse est : #reppuis".
+
+			sinon si #saisiejoueur est égale à 8 alors
+				Afficher "\nRentrer un chifre pour le Pourcentage : ".
+				Récupérer la saisie et la stocker dans #pour1. 
+				//Afficher "\nRentrer l'exposant de la Puissance : ".
+				//Récupérer la saisie et la stocker dans #puis2.
+				#reppour = #pour1 divisé par 100.
+				Afficher "\nLa réponse est : #reppour".
+				Afficher "\n".
+				
+			et sinon
+				Afficher "\nCette opération n'est pas valide .__. \n".
+				Attendre 2000ms.
+				Effacer l'écran.
+				
+				
+			?
+		>>
+	>>
+	//Ecrire une bonne fin (Au revoir) Voulez vous reccomencer 
+	
+	
+	
+	
+	
+	
+Fin de la transmission.
