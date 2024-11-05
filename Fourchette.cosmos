@@ -1,0 +1,63 @@
+Auteur: pu29avw
+Date: 09.10.2024
+Entreprise: DGEP
+Description: Fourchette
+
+Voici les ordres du programme Fourchette  :
+	//Ajoutez ici vos ordres, par exemple : Afficher "Bonjour Cosmos".
+	
+	Masquer le curseur.
+	Afficher "Bienvenue au Jeu Fourchette !!\n".
+	
+	//Gestion génération de nombre aléatoire de l'ordi
+	Créer une zone mémoire nommée #nbrordi.
+	Placer un nombre aléatoire compris entre 0 et 51 dans la zone mémoire nommée #nbrordi.
+	
+	//Création du système de nombre d'essai
+	Créer une zone mémoire nommée #nbressai avec la valeur 0.
+	
+	Afficher "Rentrez un nombre entre 1 et 50\n". 
+	
+	//Gestion du nombre du joeur
+	Créer une zone mémoire nommée #nbrjoeur.
+	Afficher "Veuillez rentrer un Nombre : ".
+	Récupérer la saisie et la stocker dans #nbrjoeur.
+	Attendre 950ms.
+	Effacer l'écran.
+
+	
+	Répéter tant que #nbrjoeur est différente de #nbrordi et #nbressai est plus petit que 10
+		Si #nbrjoeur est égale à #nbrordi alors
+			Effacer l'écran.
+			Afficher "Bien Joué, Vous Avez Gagner". 
+			Attendre 950ms.
+			Effacer l'écran.
+
+		sinon si #nbrjoeur est plus grand que #nbrordi alors 
+			Effacer l'écran.
+			Afficher "Pas de Chance, Veuillez Réessayer". 
+			Attendre 950ms.
+			Effacer l'écran.
+			Afficher "Indice : Le nombre est plus petit\n". 
+			Afficher "\nVeuillez rentrer un Nombre : ".
+			Récupérer la saisie et la stocker dans #nbrjoeur.
+			Copier #nbressai + 1 dans #nbressai.
+		sinon si #nbrjoeur est plus petit que #nbrordi alors
+			Effacer l'écran.
+			Effacer l'écran.
+			Afficher "Pas de Chance, Veuillez Réessayer". 
+			Attendre 950ms.
+			Effacer l'écran.
+			Afficher "Indice : Le nombre est plus grand\n". 
+			Afficher "\nVeuillez rentrer un Nombre : ".
+			Récupérer la saisie et la stocker dans #nbrjoeur.
+			Copier #nbressai + 1 dans #nbressai.
+		?
+	>>
+	Afficher "Fin du Jeu".
+	Attendre 950ms.
+	Effacer l'écran.
+	
+	
+	
+Fin de la transmission.
